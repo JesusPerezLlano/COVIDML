@@ -28,9 +28,41 @@ df = pd.read_csv("./spain-covid19-official-data-from-health-ministry/coronavirus
 region = df["region"].unique()
 
 #app = dash.Dash()
+theme =  {
+    'dark': True,
+    'detail': '#007439',
+    'primary': '#00EA64',
+    'secondary': '#6E6E6E',
+}
+
+colors = {
+    'background': '#111111',
+    'text': '#7FDBFF',
+    'foreground': '#FFA500',
+    'background2': '#C0C0C0',
+    'none': '#FFFFFF'
+}
+import base64
+
+
+image_filename = 'TedCas.png' # replace with your own image
+encoded_image = base64.b64encode(open(image_filename, 'rb').read()).decode('ascii')
+
 
 app.layout = html.Div([
-    html.H2("COVID in Spain"),
+    
+    html.Div([
+        html.Div([
+            html.Img(src='data:image/png;base64,{}'.format(encoded_image), className='three columns', style={'height':'10%', 'width':'10%'})#, style={'width': '16%', 'display': 'inline-block'})
+            ],   style={'textAlign': 'center','backgroundColor': colors['foreground']},),    
+        html.Div([
+            html.H2("COVID in Spain", className='three columns')#, style={'width': '16%', 'display': 'inline-block'})   
+           ],   style={'textAlign': 'center'}),
+            ],
+        style={'width': '100%', 'display': 'inline-block'}),
+    
+    
+    #html.H2("COVID in Spain"),
     html.Div(
         [
             dcc.Dropdown(
