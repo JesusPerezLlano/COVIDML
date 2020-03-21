@@ -8,6 +8,7 @@ import os
 import flask
 from random import randint
 
+external_stylesheets = ['https://codepen.io/anon/pen/mardKv.css']
 
 
 # Setup the app
@@ -15,6 +16,7 @@ from random import randint
 # the template is configured to execute 'server' on 'app.py'
 server = flask.Flask(__name__)
 server.secret_key = os.environ.get('secret_key', str(randint(0, 1000000)))
+app = dash.Dash(__name__, external_stylesheets=external_stylesheets, server=server)
 
 #app = dash.Dash()
 #server = app.server
@@ -25,7 +27,7 @@ df = pd.read_csv("./spain-covid19-official-data-from-health-ministry/coronavirus
 
 region = df["region"].unique()
 
-app = dash.Dash()
+#app = dash.Dash()
 
 app.layout = html.Div([
     html.H2("COVID in Spain"),
