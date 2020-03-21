@@ -4,9 +4,20 @@ import dash_html_components as html
 import pandas as pd
 import plotly.graph_objs as go
 from dash.dependencies import Input, Output
+import os
+import flask
+from random import randint
 
-app = dash.Dash()
-server = app.server
+
+
+# Setup the app
+# Make sure not to change this file name or the variable names below,
+# the template is configured to execute 'server' on 'app.py'
+server = flask.Flask(__name__)
+server.secret_key = os.environ.get('secret_key', str(randint(0, 1000000)))
+
+#app = dash.Dash()
+#server = app.server
 
 df = pd.read_csv("./spain-covid19-official-data-from-health-ministry/coronavirus_dataset_spain_by_regions.csv")
 #df2 = pd.read_csv("dataset_Facebook.csv",";")
