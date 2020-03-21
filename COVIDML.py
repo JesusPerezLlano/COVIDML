@@ -55,22 +55,71 @@ def update_graph(Region):
         df_plot = df.copy()
     else:
         df_plot = df[df['region'] == Region]
-
+    #print(df_plot)
     pv = pd.pivot_table(
         df_plot,
-        index=['day'],
+        index=['date'],
         #columns=['cases'],
         values=['cases'],
         aggfunc=sum,
         fill_value=0)
+    pv2 = pd.pivot_table(
+        df_plot,
+        index=['date'],
+        #columns=['cases'],
+        values=['severes'],
+        aggfunc=sum,
+        fill_value=0)
 
-    trace1 = go.Bar(x=pv.index, y=pv[('cases')], name='Declined')
+    print(pv2.index)
+    print(pv.index)
+    def RegionNumber(i):
+        switcher={
+                'Andalucí­a': 0,
+                'Aragón': 1,
+                'Asturias': 2,
+                'Baleares': 3,
+                'Canarias': 4,
+                'Cantabria': 5,
+                'Castilla La Mancha': 6,
+                'Castilla y Leon': 7,
+                'Cataluña': 8,
+                'Ceuta': 9,
+                'C.Valenciana': 10,
+                'Extremadura': 11,
+                'Galicia': 12,
+                'Madrid': 13,
+                'Melilla': 14,
+                'Murcia': 15,
+                'Navarra': 16,
+                'País Vasco': 17,
+                'La Rioja': 18
+             }
+        return switcher.get(i,0)
+
+
+    IndexRegion=RegionNumber(Region)
+    y = [] 
+    NUCIS2=[642,157,112,120,229,60,170,284,1034,7,394,116,274,700,5,145,69,236,31,4730]
+    
+    NUCIS=1000
+    day = df["day"].unique()
+    #print(day)
+    #for elemen in day:
+    #    print(elemen)
+    #    y[int(elemen)]=NUCIS
+    y_uci = [NUCIS2[int(IndexRegion)] for i in range(len(day))]
+
+    trace2 = go.Bar(x=pv.index, y=pv[('cases')], name='Infected')
+    trace1 = go.Bar(x=pv2.index, y=pv2[('severes')], name='Severes')
+    trace3 = {'x': pv.index, 'y': y_uci, 'type': 'scatter', 'name': 'número de UCIS'}
+   
     #trace2 = go.Bar(x=pv.index, y=pv[('cases', 'pending')], name='Pending')
     #trace3 = go.Bar(x=pv.index, y=pv[('cases', 'presented')], name='Presented')
     #trace4 = go.Bar(x=pv.index, y=pv[('cases', 'won')], name='Won')
 
     return {
-        'data': [trace1],#, trace2, trace3, trace4],
+        'data': [trace1, trace3],#, trace3, trace4],
         'layout':
         go.Layout(
             title='COVID19 in {}'.format(Region),
