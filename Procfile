@@ -1,1 +1,1 @@
-web: gunicorn BEP:server --timeout 300
+web: gunicorn COVIDML:server --timeout 300
