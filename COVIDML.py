@@ -11,12 +11,20 @@ from random import randint
 external_stylesheets = ['https://codepen.io/anon/pen/mardKv.css']
 
 
+
+app = dash.Dash(
+    __name__,
+    meta_tags=[{"name": "viewport", "content": "width=device-width, initial-scale=1"}],
+)
+server = app.server
+app.config["suppress_callback_exceptions"] = True
 # Setup the app
 # Make sure not to change this file name or the variable names below,
 # the template is configured to execute 'server' on 'app.py'
-server = flask.Flask(__name__)
-server.secret_key = os.environ.get('secret_key', str(randint(0, 1000000)))
-app = dash.Dash(__name__, external_stylesheets=external_stylesheets, server=server)
+
+#server = flask.Flask(__name__)
+#server.secret_key = os.environ.get('secret_key', str(randint(0, 1000000)))
+#app = dash.Dash(__name__, external_stylesheets=external_stylesheets, server=server)
 
 #app = dash.Dash()
 #server = app.server
