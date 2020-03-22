@@ -79,10 +79,12 @@ app.layout = html.Div([
                     'label': i,
                     'value': i
                 } for i in region],
-                value='All Regions'),
+                searchable=False,
+                value='All Regions',style={'height': '55px', 'width': '500px','font-size': "155%",'display': 'inline-block','vertical-align': 'middle'}),
         ],
-        style={'width': '25%',
-               'display': 'inline-block'}),
+        style={'width': '50%',
+               'display': 'inline-block','vertical-align': 'middle'}
+        ),
     dcc.Graph(id='funnel-graph'),
 ])
 
