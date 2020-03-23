@@ -91,11 +91,11 @@ app.layout = html.Div([
 #region PREDICT_DATA
 #DataFlair - Make necessary imports
 #import quandl
-import numpy as np 
-from sklearn.linear_model import LinearRegression
-from sklearn.svm import SVR
-from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import StandardScaler
+#import numpy as np 
+#from sklearn.linear_model import LinearRegression
+#from sklearn.svm import SVR
+#from sklearn.model_selection import train_test_split
+#from sklearn.preprocessing import StandardScaler
 
 dfdates  = []
 dfprices = []
@@ -122,42 +122,22 @@ def gd(dataframe):
     
     return
 
-def predict_covid(dates, prices, x):
-    #print(dates)
-    dates2 = dates
-    #dates2 = np.reshape(dates,(len(dates2), 1)) # converting to matrix of n X 1
-    #print(dates2)
-    #print(prices)
-    sc_x=StandardScaler()
-    sc_y=StandardScaler()
-    dates3=sc_x.fit_transform(dates2)
-    prices2=sc_y.fit_transform(prices[:,np.newaxis]).flatten()
+#def predict_covid(dates, prices, x):
+#    dates2 = dates
+#    sc_x=StandardScaler()
+#    sc_y=StandardScaler()
+#    dates3=sc_x.fit_transform(dates2)
+#    prices2=sc_y.fit_transform(prices[:,np.newaxis]).flatten()
     
-    print(prices2)
+#    svr_lin = SVR(kernel= 'linear', C= 1e3)
+#    svr_poly = SVR(kernel= 'poly', C= 1e3, degree= 2)
+#    svr_rbf = SVR(kernel= 'rbf', C= 1e3, gamma= 0.1) # defining the support vector regression models
+#    svr_rbf.fit(dates3, prices2) # fitting the data points in the models
+#    svr_lin.fit(dates3, prices2)
+#    svr_poly.fit(dates3, prices2)
 
-    print(dates3)
-    svr_lin = SVR(kernel= 'linear', C= 1e3)
-    svr_poly = SVR(kernel= 'poly', C= 1e3, degree= 2)
-    svr_rbf = SVR(kernel= 'rbf', C= 1e3, gamma= 0.1) # defining the support vector regression models
-    svr_rbf.fit(dates3, prices2) # fitting the data points in the models
-    svr_lin.fit(dates3, prices2)
-    svr_poly.fit(dates3, prices2)
-    
-    
-    #import matplotlib.pyplot as pp
 
-    #pp.scatter(dates2, prices, color= 'black', label= 'Data') # plotting the initial datapoints
-    #pp.plot(dates2, svr_rbf.predict(dates), color= 'red', label= 'RBF model') # plotting the line made by the RBF kernel
-    #pp.plot(dates2,svr_lin.predict(dates), color= 'green', label= 'Linear model') # plotting the line made by linear kernel
-    #pp.plot(dates2,svr_poly.predict(dates), color= 'blue', label= 'Polynomial model') # plotting the line made by polynomial kernel
-    #pp.xlabel('Date')
-    #pp.ylabel('Price')
-    #pp.title('Support Vector Regression')
-    #pp.legend()
-    #print(svr_rbf.predict(np.array(x).reshape(-1,1))[0], svr_lin.predict(np.array(x).reshape(-1,1))[0], svr_poly.predict(np.array(x).reshape(-1,1))[0])
-    #pp.show()
-
-    return svr_rbf.predict(np.array(x).reshape(-1,1))[0], svr_lin.predict(np.array(x).reshape(-1,1))[0], svr_poly.predict(np.array(x).reshape(-1,1))[0]
+#    return svr_rbf.predict(np.array(x).reshape(-1,1))[0], svr_lin.predict(np.array(x).reshape(-1,1))[0], svr_poly.predict(np.array(x).reshape(-1,1))[0]
 
 #endregion
 
@@ -220,11 +200,7 @@ def update_graph(Region):
     x=2
     Xpredictor=df_plot[['day']].values
     Ypredictor=df_plot['cases'].values
-    #print(Xpredictor)
-    #print(Ypredictor)
-    #Predict new cases
-    #print(pv.index)
-    predicted_covid = predict_covid(Xpredictor,  Ypredictor, x)
+    #predicted_covid = predict_covid(Xpredictor,  Ypredictor, x)
 
     IndexRegion=RegionNumber(Region)
     y = [] 
