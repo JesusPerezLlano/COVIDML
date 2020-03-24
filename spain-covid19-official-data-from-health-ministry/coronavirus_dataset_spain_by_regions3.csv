@@ -1,0 +1,362 @@
+date,day,weekday,region,cases,hospitalized,severes,deaths
+2020-03-04,1,Wednesday,Andalucía,13,NaN,1,0
+2020-03-04,1,Wednesday,Aragón,0,NaN,0,0
+2020-03-04,1,Wednesday,Asturias,2,NaN,1,0
+2020-03-04,1,Wednesday,Baleares,5,NaN,0,0
+2020-03-04,1,Wednesday,Canarias,7,NaN,0,0
+2020-03-04,1,Wednesday,Cantabria,10,NaN,0,0
+2020-03-04,1,Wednesday,Castilla La Mancha,12,NaN,1,0
+2020-03-04,1,Wednesday,Castilla y León,11,NaN,1,0
+2020-03-04,1,Wednesday,Cataluña,15,NaN,0,0
+2020-03-04,1,Wednesday,Ceuta,0,NaN,0,0
+2020-03-04,1,Wednesday,C. Valenciana,19,NaN,0,1
+2020-03-04,1,Wednesday,Extremadura,6,NaN,0,0
+2020-03-04,1,Wednesday,Galicia,1,NaN,0,0
+2020-03-04,1,Wednesday,Madrid,70,NaN,2,0
+2020-03-04,1,Wednesday,Melilla,0,NaN,0,0
+2020-03-04,1,Wednesday,Murcia,0,NaN,0,0
+2020-03-04,1,Wednesday,Navarra,3,NaN,1,0
+2020-03-04,1,Wednesday,País Vasco,17,NaN,0,0
+2020-03-04,1,Wednesday,La Rioja,7,NaN,0,0
+2020-03-05,2,Thursday,Andalucía,12,NaN,1,0
+2020-03-05,2,Thursday,Aragón,1,NaN,1,0
+2020-03-05,2,Thursday,Asturias,5,NaN,2,0
+2020-03-05,2,Thursday,Baleares,6,NaN,0,0
+2020-03-05,2,Thursday,Canarias,8,NaN,0,0
+2020-03-05,2,Thursday,Cantabria,10,NaN,0,0
+2020-03-05,2,Thursday,Castilla La Mancha,13,NaN,1,0
+2020-03-05,2,Thursday,Castilla y León,11,NaN,1,0
+2020-03-05,2,Thursday,Cataluña,24,NaN,0,0
+2020-03-05,2,Thursday,Ceuta,0,NaN,0,0
+2020-03-05,2,Thursday,C. Valenciana,19,NaN,0,1
+2020-03-05,2,Thursday,Extremadura,6,NaN,0,0
+2020-03-05,2,Thursday,Galicia,1,NaN,0,0
+2020-03-05,2,Thursday,Madrid,90,NaN,2,1
+2020-03-05,2,Thursday,Melilla,0,NaN,0,0
+2020-03-05,2,Thursday,Murcia,0,NaN,0,0
+2020-03-05,2,Thursday,Navarra,3,NaN,1,0
+2020-03-05,2,Thursday,País Vasco,17,NaN,0,1
+2020-03-05,2,Thursday,La Rioja,11,NaN,0,0
+2020-03-06,3,Friday,Andalucía,21,NaN,1,0
+2020-03-06,3,Friday,Aragón,6,NaN,1,1
+2020-03-06,3,Friday,Asturias,5,NaN,2,0
+2020-03-06,3,Friday,Baleares,6,NaN,0,0
+2020-03-06,3,Friday,Canarias,11,NaN,0,0
+2020-03-06,3,Friday,Cantabria,10,NaN,0,0
+2020-03-06,3,Friday,Castilla La Mancha,15,NaN,1,0
+2020-03-06,3,Friday,Castilla y León,14,NaN,1,0
+2020-03-06,3,Friday,Cataluña,24,NaN,0,0
+2020-03-06,3,Friday,Ceuta,0,NaN,0,0
+2020-03-06,3,Friday,C. Valenciana,30,NaN,1,1
+2020-03-06,3,Friday,Extremadura,6,NaN,0,0
+2020-03-06,3,Friday,Galicia,3,NaN,0,0
+2020-03-06,3,Friday,Madrid,137,NaN,2,2
+2020-03-06,3,Friday,Melilla,0,NaN,0,0
+2020-03-06,3,Friday,Murcia,0,NaN,0,0
+2020-03-06,3,Friday,Navarra,3,NaN,1,0
+2020-03-06,3,Friday,País Vasco,45,NaN,1,1
+2020-03-06,3,Friday,La Rioja,29,NaN,0,0
+2020-03-07,4,Friday,Andalucía,21,NaN,1,0
+2020-03-07,4,Friday,Aragón,6,NaN,1,1
+2020-03-07,4,Friday,Asturias,5,NaN,2,0
+2020-03-07,4,Friday,Baleares,6,NaN,0,0
+2020-03-07,4,Friday,Canarias,11,NaN,0,0
+2020-03-07,4,Friday,Cantabria,10,NaN,0,0
+2020-03-07,4,Friday,Castilla La Mancha,15,NaN,1,0
+2020-03-07,4,Friday,Castilla y León,14,NaN,1,0
+2020-03-07,4,Friday,Cataluña,24,NaN,0,0
+2020-03-07,4,Friday,Ceuta,0,NaN,0,0
+2020-03-07,4,Friday,C. Valenciana,30,NaN,1,1
+2020-03-07,4,Friday,Extremadura,6,NaN,0,0
+2020-03-07,4,Friday,Galicia,3,NaN,0,0
+2020-03-07,4,Friday,Madrid,137,NaN,2,2
+2020-03-07,4,Friday,Melilla,0,NaN,0,0
+2020-03-07,4,Friday,Murcia,0,NaN,0,0
+2020-03-07,4,Friday,Navarra,3,NaN,1,0
+2020-03-07,4,Friday,País Vasco,45,NaN,1,1
+2020-03-07,4,Friday,La Rioja,29,NaN,0,0
+2020-03-08,5,Monday,Andalucía,54,NaN,1,0
+2020-03-08,5,Monday,Aragón,13,NaN,1,1
+2020-03-08,5,Monday,Asturias,7,NaN,2,0
+2020-03-08,5,Monday,Baleares,11,NaN,0,0
+2020-03-08,5,Monday,Canarias,22,NaN,0,0
+2020-03-08,5,Monday,Cantabria,12,NaN,0,0
+2020-03-08,5,Monday,Castilla La Mancha,26,NaN,2,0
+2020-03-08,5,Monday,Castilla y León,23,NaN,1,0
+2020-03-08,5,Monday,Cataluña,75,NaN,0,1
+2020-03-08,5,Monday,Ceuta,0,NaN,0,0
+2020-03-08,5,Monday,C. Valenciana,37,NaN,1,1
+2020-03-08,5,Monday,Extremadura,7,NaN,0,0
+2020-03-08,5,Monday,Galicia,6,NaN,0,0
+2020-03-08,5,Monday,Madrid,469,NaN,53,8
+2020-03-08,5,Monday,Melilla,0,NaN,0,0
+2020-03-08,5,Monday,Murcia,4,NaN,0,0
+2020-03-08,5,Monday,Navarra,3,NaN,1,0
+2020-03-08,5,Monday,País Vasco,149,NaN,5,5
+2020-03-08,5,Monday,La Rioja,81,NaN,1,0
+2020-03-09,6,Monday,Andalucía,54,NaN,1,0
+2020-03-09,6,Monday,Aragón,13,NaN,1,1
+2020-03-09,6,Monday,Asturias,7,NaN,2,0
+2020-03-09,6,Monday,Baleares,11,NaN,0,0
+2020-03-09,6,Monday,Canarias,22,NaN,0,0
+2020-03-09,6,Monday,Cantabria,12,NaN,0,0
+2020-03-09,6,Monday,Castilla La Mancha,26,NaN,2,0
+2020-03-09,6,Monday,Castilla y León,23,NaN,1,0
+2020-03-09,6,Monday,Cataluña,75,NaN,0,1
+2020-03-09,6,Monday,Ceuta,0,NaN,0,0
+2020-03-09,6,Monday,C. Valenciana,37,NaN,1,1
+2020-03-09,6,Monday,Extremadura,7,NaN,0,0
+2020-03-09,6,Monday,Galicia,6,NaN,0,0
+2020-03-09,6,Monday,Madrid,469,NaN,53,8
+2020-03-09,6,Monday,Melilla,0,NaN,0,0
+2020-03-09,6,Monday,Murcia,4,NaN,0,0
+2020-03-09,6,Monday,Navarra,3,NaN,1,0
+2020-03-09,6,Monday,País Vasco,149,NaN,5,5
+2020-03-09,6,Monday,La Rioja,81,NaN,1,0
+2020-03-10,7,Tuesday,Andalucía,71,NaN,1,0
+2020-03-10,7,Tuesday,Aragón,38,NaN,3,3
+2020-03-10,7,Tuesday,Asturias,22,NaN,2,0
+2020-03-10,7,Tuesday,Baleares,13,NaN,1,0
+2020-03-10,7,Tuesday,Canarias,25,NaN,1,0
+2020-03-10,7,Tuesday,Cantabria,12,NaN,0,0
+2020-03-10,7,Tuesday,Castilla La Mancha,39,NaN,2,0
+2020-03-10,7,Tuesday,Castilla y León,56,NaN,2,0
+2020-03-10,7,Tuesday,Cataluña,124,NaN,0,3
+2020-03-10,7,Tuesday,Ceuta,0,NaN,0,0
+2020-03-10,7,Tuesday,C. Valenciana,50,NaN,1,1
+2020-03-10,7,Tuesday,Extremadura,8,NaN,0,0
+2020-03-10,7,Tuesday,Galicia,22,NaN,2,0
+2020-03-10,7,Tuesday,Madrid,782,NaN,77,21
+2020-03-10,7,Tuesday,Melilla,0,NaN,0,0
+2020-03-10,7,Tuesday,Murcia,9,NaN,0,0
+2020-03-10,7,Tuesday,Navarra,12,NaN,2,0
+2020-03-10,7,Tuesday,País Vasco,195,NaN,5,6
+2020-03-10,7,Tuesday,La Rioja,144,NaN,1,1
+2020-03-11,8,Wednesday,Andalucía,90,NaN,3,0
+2020-03-11,8,Wednesday,Aragón,45,NaN,3,4
+2020-03-11,8,Wednesday,Asturias,32,NaN,2,0
+2020-03-11,8,Wednesday,Baleares,16,NaN,1,0
+2020-03-11,8,Wednesday,Canarias,37,NaN,1,0
+2020-03-11,8,Wednesday,Cantabria,12,NaN,0,0
+2020-03-11,8,Wednesday,Castilla La Mancha,71,NaN,5,0
+2020-03-11,8,Wednesday,Castilla y León,71,NaN,2,0
+2020-03-11,8,Wednesday,Cataluña,156,NaN,0,3
+2020-03-11,8,Wednesday,Ceuta,0,NaN,0,0
+2020-03-11,8,Wednesday,C. Valenciana,65,NaN,1,1
+2020-03-11,8,Wednesday,Extremadura,9,NaN,1,0
+2020-03-11,8,Wednesday,Galicia,39,NaN,2,0
+2020-03-11,8,Wednesday,Madrid,1024,NaN,102,31
+2020-03-11,8,Wednesday,Melilla,0,NaN,0,0
+2020-03-11,8,Wednesday,Murcia,11,NaN,0,0
+2020-03-11,8,Wednesday,Navarra,46,NaN,3,0
+2020-03-11,8,Wednesday,País Vasco,225,NaN,15,6
+2020-03-11,8,Wednesday,La Rioja,179,NaN,1,2
+2020-03-12,9,Thursday,Andalucía,115,NaN,4,0
+2020-03-12,9,Thursday,Aragón,64,NaN,3,6
+2020-03-12,9,Thursday,Asturias,47,NaN,2,1
+2020-03-12,9,Thursday,Baleares,22,NaN,2,1
+2020-03-12,9,Thursday,Canarias,51,NaN,3,0
+2020-03-12,9,Thursday,Cantabria,16,NaN,0,0
+2020-03-12,9,Thursday,Castilla La Mancha,115,NaN,9,1
+2020-03-12,9,Thursday,Castilla y León,92,NaN,4,0
+2020-03-12,9,Thursday,Cataluña,260,NaN,0,4
+2020-03-12,9,Thursday,Ceuta,0,NaN,0,0
+2020-03-12,9,Thursday,C. Valenciana,76,NaN,2,1
+2020-03-12,9,Thursday,Extremadura,19,NaN,1,1
+2020-03-12,9,Thursday,Galicia,35,NaN,2,0
+2020-03-12,9,Thursday,Madrid,1388,NaN,135,56
+2020-03-12,9,Thursday,Melilla,0,NaN,0,0
+2020-03-12,9,Thursday,Murcia,26,NaN,1,0
+2020-03-12,9,Thursday,Navarra,73,NaN,3,0
+2020-03-12,9,Thursday,País Vasco,346,NaN,18,11
+2020-03-12,9,Thursday,La Rioja,205,NaN,1,2
+2020-03-13,10,Friday,Andalucía,219,NaN,8,0
+2020-03-13,10,Friday,Aragón,80,NaN,3,7
+2020-03-13,10,Friday,Asturias,67,NaN,2,1
+2020-03-13,10,Friday,Baleares,30,NaN,2,1
+2020-03-13,10,Friday,Canarias,70,NaN,2,0
+2020-03-13,10,Friday,Cantabria,29,NaN,0,0
+2020-03-13,10,Friday,Castilla La Mancha,194,NaN,10,5
+2020-03-13,10,Friday,Castilla y León,169,NaN,8,1
+2020-03-13,10,Friday,Cataluña,316,NaN,25,4
+2020-03-13,10,Friday,Ceuta,0,NaN,0,0
+2020-03-13,10,Friday,C. Valenciana,94,NaN,2,1
+2020-03-13,10,Friday,Extremadura,39,NaN,1,1
+2020-03-13,10,Friday,Galicia,85,NaN,2,0
+2020-03-13,10,Friday,Madrid,1990,NaN,180,81
+2020-03-13,10,Friday,Melilla,2,NaN,0,0
+2020-03-13,10,Friday,Murcia,35,NaN,1,0
+2020-03-13,10,Friday,Navarra,130,NaN,4,0
+2020-03-13,10,Friday,País Vasco,417,NaN,20,14
+2020-03-13,10,Friday,La Rioja,243,NaN,2,2
+2020-03-14,11,Saturday,Andalucía,269,NaN,2,
+2020-03-14,11,Saturday,Aragón,80,NaN,7,
+2020-03-14,11,Saturday,Asturias,92,NaN,1,
+2020-03-14,11,Saturday,Baleares,28,NaN,1,
+2020-03-14,11,Saturday,Canarias,90,NaN,1,
+2020-03-14,11,Saturday,Cantabria,31,NaN,0,
+2020-03-14,11,Saturday,Castilla La Mancha,289,NaN,6,
+2020-03-14,11,Saturday,Castilla y León,223,NaN,3,
+2020-03-14,11,Saturday,Cataluña,509,NaN,6,
+2020-03-14,11,Saturday,Ceuta,0,NaN,0,
+2020-03-14,11,Saturday,C. Valenciana,130,NaN,4,
+2020-03-14,11,Saturday,Extremadura,66,NaN,2,
+2020-03-14,11,Saturday,Galicia,115,NaN,0,
+2020-03-14,11,Saturday,Madrid,2940,NaN,86,
+2020-03-14,11,Saturday,Melilla,3,NaN,0,
+2020-03-14,11,Saturday,Murcia,47,NaN,0,
+2020-03-14,11,Saturday,Navarra,146,NaN,0,
+2020-03-14,11,Saturday,País Vasco,417,NaN,14,
+2020-03-14,11,Saturday,La Rioja,278,NaN,3,
+2020-03-15,12,Sunday,Andalucía,437,NaN,6,
+2020-03-15,12,Sunday,Aragón,147,NaN,7,
+2020-03-15,12,Sunday,Asturias,137,NaN,1,
+2020-03-15,12,Sunday,Baleares,28,NaN,1,
+2020-03-15,12,Sunday,Canarias,109,NaN,1,
+2020-03-15,12,Sunday,Cantabria,51,NaN,0,
+2020-03-15,12,Sunday,Castilla La Mancha,401,NaN,10,
+2020-03-15,12,Sunday,Castilla y León,292,NaN,6,
+2020-03-15,12,Sunday,Cataluña,715,NaN,8,
+2020-03-15,12,Sunday,Ceuta,1,NaN,0,
+2020-03-15,12,Sunday,C. Valenciana,409,NaN,5,
+2020-03-15,12,Sunday,Extremadura,95,NaN,2,
+2020-03-15,12,Sunday,Galicia,195,NaN,2,
+2020-03-15,12,Sunday,Madrid,3544,NaN,213,
+2020-03-15,12,Sunday,Melilla,8,NaN,0,
+2020-03-15,12,Sunday,Murcia,71,NaN,0,
+2020-03-15,12,Sunday,Navarra,183,NaN,0,
+2020-03-15,12,Sunday,País Vasco,630,NaN,23,
+2020-03-15,12,Sunday,La Rioja,300,NaN,3,
+2020-03-16,13,Monday,Andalucía,554,NaN,11,7
+2020-03-16,13,Monday,Aragón,174,NaN,7,11
+2020-03-16,13,Monday,Asturias,177,NaN,3,1
+2020-03-16,13,Monday,Baleares,73,NaN,4,1
+2020-03-16,13,Monday,Canarias,119,NaN,9,1
+2020-03-16,13,Monday,Cantabria,58,NaN,2,0
+2020-03-16,13,Monday,Castilla La Mancha,567,NaN,23,17
+2020-03-16,13,Monday,Castilla y León,334,NaN,24,9
+2020-03-16,13,Monday,Cataluña,903,NaN,33,12
+2020-03-16,13,Monday,Ceuta,1,NaN,0,0
+2020-03-16,13,Monday,C. Valenciana,409,NaN,4,5
+2020-03-16,13,Monday,Extremadura,111,NaN,1,2
+2020-03-16,13,Monday,Galicia,245,NaN,9,2
+2020-03-16,13,Monday,Madrid,4165,NaN,253,213
+2020-03-16,13,Monday,Melilla,8,NaN,0,0
+2020-03-16,13,Monday,Murcia,77,NaN,2,0
+2020-03-16,13,Monday,Navarra,274,NaN,5,1
+2020-03-16,13,Monday,País Vasco,630,NaN,29,23
+2020-03-16,13,Monday,La Rioja,312,NaN,13,4
+2020-03-17,14,Tuesday,Andalucía,683,NaN,13,11
+2020-03-17,14,Tuesday,Aragón,207,NaN,9,12
+2020-03-17,14,Tuesday,Asturias,193,NaN,5,1
+2020-03-17,14,Tuesday,Baleares,92,NaN,4,1
+2020-03-17,14,Tuesday,Canarias,148,NaN,13,2
+2020-03-17,14,Tuesday,Cantabria,58,NaN,2,0
+2020-03-17,14,Tuesday,Castilla La Mancha,567,NaN,23,17
+2020-03-17,14,Tuesday,Castilla y León,431,NaN,24,12
+2020-03-17,14,Tuesday,Cataluña,1394,NaN,33,18
+2020-03-17,14,Tuesday,Ceuta,1,NaN,0,0
+2020-03-17,14,Tuesday,C. Valenciana,541,NaN,27,13
+2020-03-17,14,Tuesday,Extremadura,153,NaN,2,3
+2020-03-17,14,Tuesday,Galicia,292,NaN,9,3
+2020-03-17,14,Tuesday,Madrid,4871,NaN,340,355
+2020-03-17,14,Tuesday,Melilla,17,NaN,0,0
+2020-03-17,14,Tuesday,Murcia,97,NaN,3,0
+2020-03-17,14,Tuesday,Navarra,313,NaN,10,2
+2020-03-17,14,Tuesday,País Vasco,765,NaN,33,36
+2020-03-17,14,Tuesday,La Rioja,355,NaN,13,5
+2020-03-18,15,Wednesday,Andalucía,859,NaN,21,19
+2020-03-18,15,Wednesday,Aragón,226,NaN,9,13
+2020-03-18,15,Wednesday,Asturias,242,NaN,5,1
+2020-03-18,15,Wednesday,Baleares,112,NaN,4,1
+2020-03-18,15,Wednesday,Canarias,181,NaN,17,3
+2020-03-18,15,Wednesday,Cantabria,68,NaN,3,1
+2020-03-18,15,Wednesday,Castilla La Mancha,675,NaN,29,28
+2020-03-18,15,Wednesday,Castilla y León,668,NaN,43,22
+2020-03-18,15,Wednesday,Cataluña,1866,NaN,33,41
+2020-03-18,15,Wednesday,Ceuta,1,NaN,0,0
+2020-03-18,15,Wednesday,C. Valenciana,726,NaN,40,22
+2020-03-18,15,Wednesday,Extremadura,194,NaN,3,6
+2020-03-18,15,Wednesday,Galicia,341,NaN,12,3
+2020-03-18,15,Wednesday,Madrid,5637,NaN,491,390
+2020-03-18,15,Wednesday,Melilla,20,NaN,0,0
+2020-03-18,15,Wednesday,Murcia,122,NaN,4,0
+2020-03-18,15,Wednesday,Navarra,386,NaN,10,3
+2020-03-18,15,Wednesday,País Vasco,973,NaN,37,40
+2020-03-18,15,Wednesday,La Rioja,419,NaN,13,5
+2020-03-19,16,Thursday,Andalucía,1008,NaN,25,23
+2020-03-19,16,Thursday,Aragón,281,NaN,14,15
+2020-03-19,16,Thursday,Asturias,292,NaN,6,1
+2020-03-19,16,Thursday,Baleares,169,NaN,7,2
+2020-03-19,16,Thursday,Canarias,220,NaN,23,3
+2020-03-19,16,Thursday,Cantabria,83,NaN,4,1
+2020-03-19,16,Thursday,Castilla La Mancha,801,NaN,37,42
+2020-03-19,16,Thursday,Castilla y León,868,NaN,54,29
+2020-03-19,16,Thursday,Cataluña,2702,NaN,33,55
+2020-03-19,16,Thursday,Ceuta,1,NaN,0,0
+2020-03-19,16,Thursday,C. Valenciana,921,NaN,52,24
+2020-03-19,16,Thursday,Extremadura,241,NaN,3,8
+2020-03-19,16,Thursday,Galicia,453,NaN,15,4
+2020-03-19,16,Thursday,Madrid,6777,NaN,590,498
+2020-03-19,16,Thursday,Melilla,23,NaN,0,0
+2020-03-19,16,Thursday,Murcia,167,NaN,6,0
+2020-03-19,16,Thursday,Navarra,482,NaN,11,4
+2020-03-19,16,Thursday,País Vasco,1190,NaN,44,53
+2020-03-19,16,Thursday,La Rioja,468,NaN,15,5
+2020-03-20,17,Friday,Andalucía,1287,NaN,38,30
+2020-03-20,17,Friday,Aragón,360,NaN,28,17
+2020-03-20,17,Friday,Asturias,344,NaN,7,2
+2020-03-20,17,Friday,Baleares,203,NaN,10,2
+2020-03-20,17,Friday,Canarias,287,NaN,25,4
+2020-03-20,17,Friday,Cantabria,144,NaN,7,1
+2020-03-20,17,Friday,Castilla La Mancha,1044,NaN,37,62
+2020-03-20,17,Friday,Castilla y León,1147,NaN,69,43
+2020-03-20,17,Friday,Cataluña,3270,NaN,33,82
+2020-03-20,17,Friday,Ceuta,5,NaN,0,0
+2020-03-20,17,Friday,C. Valenciana,1105,NaN,71,33
+2020-03-20,17,Friday,Extremadura,297,NaN,4,10
+2020-03-20,17,Friday,Galicia,578,NaN,19,5
+2020-03-20,17,Friday,Madrid,7165,NaN,678,628
+2020-03-20,17,Friday,Melilla,24,NaN,1,0
+2020-03-20,17,Friday,Murcia,204,NaN,11,0
+2020-03-20,17,Friday,Navarra,554,NaN,19,5
+2020-03-20,17,Friday,País Vasco,1465,NaN,53,71
+2020-03-20,17,Friday,La Rioja,497,NaN,15,7
+2020-03-21,18,Saturday,Andalucía,1515,605,53,40
+2020-03-21,18,Saturday,Aragón,424,192,33,22
+2020-03-21,18,Saturday,Asturias,486,133,12,5
+2020-03-21,18,Saturday,Baleares,246,60,14,4
+2020-03-21,18,Saturday,Canarias,348,139,29,7
+2020-03-21,18,Saturday,Cantabria,215,92,9,2
+2020-03-21,18,Saturday,Castilla La Mancha,1423,635,65,84
+2020-03-21,18,Saturday,Castilla y León,1466,575,85,55
+2020-03-21,18,Saturday,Cataluña,4203,1681,298,122
+2020-03-21,18,Saturday,Ceuta,5,0,0,0
+2020-03-21,18,Saturday,C. Valenciana,1363,476,84,50
+2020-03-21,18,Saturday,Extremadura,354,65,6,12
+2020-03-21,18,Saturday,Galicia,739,168,29,9
+2020-03-21,18,Saturday,Madrid,8921,7388,767,804
+2020-03-21,18,Saturday,Melilla,25,8,1,0
+2020-03-21,18,Saturday,Murcia,240,61,14,1
+2020-03-21,18,Saturday,Navarra,664,222,25,9
+2020-03-21,18,Saturday,País Vasco,1725,654,71,85
+2020-03-21,18,Saturday,La Rioja,564,128,17,15
+2020-03-22,19,Sunday,Andalucía,1725,724,55,47
+2020-03-22,19,Sunday,Aragón,532,241,45,24
+2020-03-22,19,Sunday,Asturias,545,171,15,8
+2020-03-22,19,Sunday,Baleares,331,79,14,4
+2020-03-22,19,Sunday,Canarias,414,150,32,9
+2020-03-22,19,Sunday,Cantabria,282,116,9,5
+2020-03-22,19,Sunday,Castilla La Mancha,1819,838,76,112
+2020-03-22,19,Sunday,Castilla y León,1744,709,106,74
+2020-03-22,19,Sunday,Cataluña,4704,1681,298,191
+2020-03-22,19,Sunday,Ceuta,5,0,0,0
+2020-03-22,19,Sunday,C. Valenciana,1604,590,113,69
+2020-03-22,19,Sunday,Extremadura,384,87,8,14
+2020-03-22,19,Sunday,Galicia,915,227,35,12
+2020-03-22,19,Sunday,Madrid,9702,8441,834,1021
+2020-03-22,19,Sunday,Melilla,25,12,1,0
+2020-03-22,19,Sunday,Murcia,296,78,16,1
+2020-03-22,19,Sunday,Navarra,794,288,30,14
+2020-03-22,19,Sunday,País Vasco,2097,988,81,97
+2020-03-22,19,Sunday,La Rioja,654,134,17,18

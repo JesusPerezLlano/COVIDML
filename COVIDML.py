@@ -29,9 +29,9 @@ app.config["suppress_callback_exceptions"] = True
 #app = dash.Dash()
 #server = app.server
 
-df = pd.read_csv("./spain-covid19-official-data-from-health-ministry/coronavirus_dataset_spain_by_regions.csv")
+df = pd.read_csv("./spain-covid19-official-data-from-health-ministry/coronavirus_dataset_spain_by_regions3.csv")
 #df2 = pd.read_csv("dataset_Facebook.csv",";")
-#print(df)
+
 
 region = df["region"].unique()
 
@@ -64,7 +64,7 @@ app.layout = html.Div([
             html.Img(src='data:image/png;base64,{}'.format(encoded_image), className='three columns', style={'height':'10%', 'width':'10%'})#, style={'width': '16%', 'display': 'inline-block'})
             ],   style={'textAlign': 'center','backgroundColor': colors['foreground']},),    
         html.Div([
-            html.H2("COVID in Spain", className='three columns')#, style={'width': '16%', 'display': 'inline-block'})   
+            html.H2("COVID19 in Spain", className='three columns')#, style={'width': '16%', 'display': 'inline-block'})   
            ],   style={'textAlign': 'center'}),
             ],
         style={'width': '100%', 'display': 'inline-block'}),
@@ -91,7 +91,7 @@ app.layout = html.Div([
 #region PREDICT_DATA
 #DataFlair - Make necessary imports
 #import quandl
-#import numpy as np 
+import numpy as np 
 #from sklearn.linear_model import LinearRegression
 #from sklearn.svm import SVR
 #from sklearn.model_selection import train_test_split
@@ -115,14 +115,13 @@ def gd(dataframe):
     ndataframe.reset_index(drop=True, inplace=True)
     while i <= len(ndataframe2):
         a = ndataframe2#.xs(i)
-        #print(a)
         dfdates.append(i)
         dfprices.append(a[i-1])
         i += 1
     
     return
 
-#def predict_covid(dates, prices, x):
+def predict_covid(dates, infected, extra_days,number_elements):
 #    dates2 = dates
 #    sc_x=StandardScaler()
 #    sc_y=StandardScaler()
@@ -136,6 +135,126 @@ def gd(dataframe):
 #    svr_lin.fit(dates3, prices2)
 #    svr_poly.fit(dates3, prices2)
 
+    from sklearn.linear_model import LinearRegression
+    from sklearn.metrics import mean_squared_error
+    from sklearn.svm import SVR
+
+    import numpy as np
+
+    ###########################################
+    #LINEAR PREDICTION
+    ###########################################
+    m = len(dates)
+    # Cannot use Rank 1 matrix in scikit learn
+    X = dates.reshape((m, 1))
+    # Creating Model
+    reg = LinearRegression()
+    # Fitting training data
+    reg = reg.fit(X, infected)
+    # Y Prediction
+    Y_pred = reg.predict(X)
+
+    # Calculating RMSE and R2 Score
+    mse = mean_squared_error(infected, Y_pred)
+    # Explained variance score: 1 is perfect prediction
+    # and 0 means that there is no linear relationship
+    # between X and y.
+    rmse = np.sqrt(mse)
+    r2_score = reg.score(X, infected)
+
+    print(np.sqrt(mse))
+    print(r2_score)
+
+    ##############################################
+    #Support Vector Rregression PREDICTION
+    ##############################################
+    reg = SVR(kernel='rbf')
+
+
+    #Scalling the data
+    #3 Feature Scaling
+    from sklearn.preprocessing import StandardScaler
+    Y = infected.reshape((m, 1))
+
+    sc_X = StandardScaler()
+    sc_y = StandardScaler()
+    X_scaled = sc_X.fit_transform(X)
+    Y_scaled = sc_y.fit_transform(Y)
+    
+    #Kernels
+    reg_r = SVR(kernel='rbf')
+    reg_p = SVR(kernel='poly')
+    reg_s = SVR(kernel='sigmoid')
+    reg_l = SVR(kernel='linear')
+
+
+    #LINEAL
+    # Fitting training data
+    reg_l.fit(X_scaled, Y_scaled)
+    # Y Prediction
+    #Y_pred = reg.predict(X_scaled)
+
+    #Añadimos dias extra para predecir#########################
+    #We create a vector with dates+extra days (to predict value)
+    m = number_elements
+    future_days=np.arange(m+3, m+3+extra_days)
+    dates_extra=np.concatenate((dates, future_days), axis=None)
+    X = dates_extra.reshape((m+extra_days, 1))
+    ############################################################
+    Y_pred_l = sc_y.inverse_transform((reg_l.predict(sc_X.transform(X))))
+    
+
+    #SIGMOID
+    # Fitting training data
+    reg_s.fit(X_scaled, Y_scaled)
+    # Y Prediction
+    #Y_pred = reg.predict(X_scaled)
+
+    #Añadimos dias extra para predecir#########################
+    #We create a vector with dates+extra days (to predict value)
+    m = number_elements
+    future_days=np.arange(m+3, m+3+extra_days)
+    dates_extra=np.concatenate((dates, future_days), axis=None)
+    X = dates_extra.reshape((m+extra_days, 1))
+    ############################################################
+    Y_pred_s = sc_y.inverse_transform((reg_s.predict(sc_X.transform(X))))
+
+   
+
+    
+    #RADIAL
+    # Fitting training data
+    reg_r.fit(X_scaled, Y_scaled)
+    # Y Prediction
+    #Y_pred = reg.predict(X_scaled)
+
+    #Añadimos dias extra para predecir#########################
+    #We create a vector with dates+extra days (to predict value)
+    m = number_elements
+    future_days=np.arange(m+3, m+3+extra_days)
+    dates_extra=np.concatenate((dates, future_days), axis=None)
+    X = dates_extra.reshape((m+extra_days, 1))
+    ############################################################
+    Y_pred_r = sc_y.inverse_transform((reg_r.predict(sc_X.transform(X))))
+
+    #POLINOMIAL
+    # Fitting training data
+    reg_p.fit(X_scaled, Y_scaled)
+    # Y Prediction
+    #Y_pred = reg.predict(X_scaled)
+
+    #Añadimos dias extra para predecir#########################
+    #We create a vector with dates+extra days (to predict value)
+    m = number_elements
+    future_days=np.arange(m+3, m+3+extra_days)
+    dates_extra=np.concatenate((dates, future_days), axis=None)
+    X = dates_extra.reshape((m+extra_days, 1))
+    ############################################################
+
+    Y_pred_p = sc_y.inverse_transform((reg_p.predict(sc_X.transform(X))))
+
+    return Y_pred_l, Y_pred_p, Y_pred_s, Y_pred_r
+    
 
 #    return svr_rbf.predict(np.array(x).reshape(-1,1))[0], svr_lin.predict(np.array(x).reshape(-1,1))[0], svr_poly.predict(np.array(x).reshape(-1,1))[0]
 
@@ -150,10 +269,9 @@ def gd(dataframe):
     [dash.dependencies.Input('Region', 'value')])
 def update_graph(Region):
     if Region == "All Regions":
-        df_plot = df.copy()
+        df_plot = df[df['region'] == 'Cantabria']#df.copy()
     else:
         df_plot = df[df['region'] == Region]
-    #print(df_plot)
     pv = pd.pivot_table(
         df_plot,
         index=['date'],
@@ -169,10 +287,7 @@ def update_graph(Region):
         aggfunc=sum,
         fill_value=0)
 
-    #print(pv2.index)
-    #print(pv.index)
-    
-    #print(df_plot)
+   
     def RegionNumber(i):
         switcher={
                 'Andalucí­a': 0,
@@ -198,9 +313,22 @@ def update_graph(Region):
         return switcher.get(i,0)
 
     x=2
-    Xpredictor=df_plot[['day']].values
+    #Xpredictor=df_plot[['day']].values
     Ypredictor=df_plot['cases'].values
-    #predicted_covid = predict_covid(Xpredictor,  Ypredictor, x)
+    Xpredictor=df_plot['day'].values
+
+    len_days=len(df["day"].unique())
+    predicted_covid = predict_covid(Xpredictor,  Ypredictor, x, len_days )
+
+    #We create a vector with dates+extra days (to predict value)
+    m = len(df["day"].unique())
+    #+2 because two days are left
+    future_days=np.arange(m+3, m+3+x)
+    dates_extra=np.concatenate((df["day"].unique(), future_days), axis=None)
+    # Cannot use Rank 1 matrix in scikit learn
+    X_axis = dates_extra.reshape((m+x, 1))
+
+    
 
     IndexRegion=RegionNumber(Region)
     y = [] 
@@ -209,34 +337,44 @@ def update_graph(Region):
     NUCIS2=[642,157,112,120,229,60,170,284,1034,7,394,116,274,700,5,145,69,236,31,4730]
     NHABITANTES=[8426405,1320794, 1022293,1187808,2207225,581684,2035505,2408083,7565099,84843,4974475,1065371,2700330,6640705,7060,1487698,649966,2178048,313582]
 
-
+    #DELETE PREDICTED VALUES IF THEY ARE NEGATIVE
+    # code to replace all negative value with 0 
+    array0 = np.where(np.asarray(predicted_covid[0])<0, 0, np.asarray(predicted_covid[0])) 
+    array1 = np.where(np.asarray(predicted_covid[1])<0, 0, np.asarray(predicted_covid[1])) 
+    array2 = np.where(np.asarray(predicted_covid[2])<0, 0, np.asarray(predicted_covid[2])) 
+    array3 = np.where(np.asarray(predicted_covid[3])<0, 0, np.asarray(predicted_covid[3])) 
+    #predicted_covid[0]=array0
 
 
     
     NUCIS=1000
     day = df["day"].unique()
-    #print(day)
     #for elemen in day:
-    #    print(elemen)
     #    y[int(elemen)]=NUCIS
     y_uci = [NUCIS2[int(IndexRegion)] for i in range(len(day))]
 
-    trace2 = go.Bar(x=pv.index, y=pv[('cases')], name='Infected')
-    trace1 = go.Bar(x=pv2.index, y=pv2[('severes')], name='Severes')
-    trace3 = {'x': pv.index, 'y': y_uci, 'type': 'scatter', 'name': 'número de UCIS'}
+    trace2 = go.Bar(x=X_axis.flatten(), y=pv[('cases')], name='Infected')
+    trace1 = go.Bar(x=X_axis.flatten(), y=pv2[('severes')], name='Severes') #pv2.index
+    trace3 = {'x': X_axis.flatten(), 'y': y_uci, 'type': 'scatter', 'name': 'número de UCIS'}
     #trace3 = {'x': pv.index, 'y': y_uci, 'type': 'scatter', 'name': 'número de UCIS'}
+   
+   #  return Y_pred_l, Y_pred_p, Y_pred_s, Y_pred_r
+   #pv.index
+    trace4 = {'x':X_axis.flatten(), 'y': array0, 'type': 'scatter', 'name': 'Predicted Lineal'}
+    trace5 = {'x': X_axis.flatten(), 'y': array1, 'type': 'scatter', 'name': 'Predicted Poly'}
+    trace7 = {'x': X_axis.flatten(), 'y': array2, 'type': 'scatter', 'name': 'Predicted Sigmoid'}
+    trace6 = {'x': X_axis.flatten(), 'y': array3, 'type': 'scatter', 'name': 'Predicted Radial'}
 
-    #print(predict_covid[0])
-    #trace4 = go.Bar(x=pv.index, y=predict_covid[0], name='Predicted')
+    #trace4 = go.Bar(x=pv.index, y=predicted_covid, name='Predicted')
     #trace2 = go.Bar(x=pv.index, y=pv[('cases', 'pending')], name='Pending')
     #trace3 = go.Bar(x=pv.index, y=pv[('cases', 'presented')], name='Presented')
     #trace4 = go.Bar(x=pv.index, y=pv[('cases', 'won')], name='Won')
     PI=df_plot.iloc[-1,4]/NHABITANTES[int(IndexRegion)]*100000
     return {
-        'data': [trace1, trace3, trace2],#, trace4],#, trace3, trace4],
+        'data': [trace1, trace2, trace4, trace5, trace6],#,trace7],#trace3, 
         'layout':
         go.Layout(
-            title='COVID19 in {}'.format(Region) + '(Number of infected/100000 hab='+str(int(PI)) + ')'
+            title='COVID19 in {}'.format(Region) + '(Number of infected/100.000 hab='+str(int(PI)) + ')'
             #,barmode='stack'
             )
     }
